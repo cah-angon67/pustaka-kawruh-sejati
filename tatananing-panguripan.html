@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Memahami tatanan kehidupan dan kedudukan manusia dalam menjalani kehidupan secara selaras.">
   <meta name="theme-color" content="#21170f">
 
@@ -16,37 +17,12 @@
       background: #21170f;
     }
 
-    .article-page .page-hero {
-      background: #21170f;
-      color: #f5efe4;
-      padding-top: 48px;
-      padding-bottom: 42px;
-    }
-
-    .article-page .breadcrumb {
-      color: #b9a98e;
-    }
-
-    .article-page .breadcrumb a {
-      color: #d3b779;
-    }
-
-    .article-page .eyebrow {
-      color: #d3b779;
-    }
-
-    .article-page .page-hero h1 {
-      color: #f5efe4;
-    }
-
-    .article-page .page-hero > p:not(.eyebrow) {
-      color: #d6c9b6;
-    }
-
     .article-page .article-body {
+      box-sizing: border-box;
+      width: calc(100% - 40px);
       max-width: 900px;
-      margin: 0 auto 65px;
-      padding: 55px 65px 65px;
+      margin: 45px auto 70px;
+      padding: 55px 65px 60px;
       background: #fffaf1;
       color: #382c20;
       border: 1px solid #b18a49;
@@ -95,21 +71,16 @@
     }
 
     @media (max-width: 600px) {
-      .article-page .page-hero {
-        padding-top: 35px;
-        padding-bottom: 30px;
-      }
-
       .article-page .article-body {
         width: calc(100% - 28px);
-        margin-bottom: 35px;
+        margin: 28px auto 40px;
         padding: 32px 23px 40px;
       }
 
       .article-page .article-body p {
-        text-align: left;
         font-size: 14px;
         line-height: 1.9;
+        text-align: left;
       }
 
       .article-page .article-body p.lead {
@@ -124,15 +95,10 @@
 <header class="site-header">
   <a class="brand" href="../index.html" aria-label="Pustaka Kawruh Sejati">
     <span class="brand-mark">ꦏ</span>
-    <span>
-      <b>PUSTAKA</b>
-      <small>KAWRUH SEJATI</small>
-    </span>
+    <span><b>PUSTAKA</b><small>KAWRUH SEJATI</small></span>
   </a>
 
-  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">
-    ☰
-  </button>
+  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
 
   <nav class="nav">
     <a href="../index.html">Beranda</a>
@@ -204,7 +170,8 @@
   <div class="footer-brand">
     PUSTAKA <b>KAWRUH SEJATI</b>
   </div>
-  <p>© 2026 Cah Angon 67</p>
+  <p>Pusat dokumentasi, pemaparan, dan penyebarluasan Kawruh Sejati.</p>
+  <small>© 2026 Pustaka Kawruh Sejati · Cah Angon 67</small>
 </footer>
 
 <script src="../script.js"></script>
