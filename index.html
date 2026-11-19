@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pustaka Kawruh Sejati: pusat pemaparan, artikel, dan katalog buku tentang Kawruh Sejati, Kasunyatan Hakiki, hakikat kehidupan, dan Tatananing Panguripan.">
+  <meta name="theme-color" content="#21170f">
+  <title>Pustaka Kawruh Sejati</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#beranda" aria-label="Pustaka Kawruh Sejati">
+    <span class="brand-mark">ꦏ</span>
+    <span><b>PUSTAKA</b><small>KAWRUH SEJATI</small></span>
+  </a>
+  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+  <nav class="nav">
+    <a href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#artikel">Artikel</a><a href="#katalog">Katalog Buku</a><a href="#landasan">Landasan Kawruh</a>
+  </nav>
+</header>
+<main>
+  <section class="hero" id="beranda">
+    <div class="hero-content">
+      <p class="eyebrow">PUSTAKA • PEMAPARAN • PANGAWIKAN</p>
+      <h1>Memahami Hakikat<br><em>Kawruh Sejati</em></h1>
+      <p class="hero-lead">Ruang pustaka untuk mengenal Kasunyatan Hakiki, memahami hakikat kehidupan, dan menapaki Tatananing Panguripan.</p>
+      <div class="hero-actions"><a class="btn gold" href="#artikel">Jelajahi Artikel</a><a class="btn outline" href="#katalog">Lihat Katalog Buku</a></div>
+    </div>
+    <div class="hero-seal" aria-hidden="true"><span>ꦏ</span><small>KAWRUH<br>SEJATI</small></div>
+  </section>
+
+  <section class="intro section" id="tentang">
+    <p class="eyebrow">MENGENAL PUSTAKA</p>
+    <h2>Ruang pemaparan Kawruh Sejati</h2>
+    <p class="intro-copy">Pustaka Kawruh Sejati merupakan pusat dokumentasi, pemaparan, dan penyebarluasan Kawruh Sejati sebagai pepadhang untuk memahami Kasunyatan Hakiki, hakikat kehidupan, dan Tatananing Panguripan. Pustaka ini menghimpun artikel, naskah pemikiran, serta katalog buku yang menguraikan asal, hakikat, tatanan, dan tujuan kehidupan.</p>
+  </section>
+
+  <section class="section dark-section" id="landasan">
+    <div class="section-heading"><div><p class="eyebrow">LANDASAN PEMAHAMAN</p><h2>Rangkaian Panguripan</h2></div><p>Memahami kehidupan melalui hubungan sumber, hakikat, dan perwujudannya.</p></div>
+    <div class="sequence">
+      <article><span>01</span><h3>Sang Sumber Panguripan</h3><p>Asal mula dan sumber kehidupan.</p></article>
+      <article><span>02</span><h3>Prabhawaning Panguripan</h3><p>Asal, daya, dan tatanan panguripan; sumber Kawruh Sejati.</p></article>
+      <article><span>03</span><h3>Jatining Panguripan</h3><p>Hakikat kehidupan yang menjadi dasar keberadaan.</p></article>
+      <article><span>04</span><h3>Panguripan</h3><p>Kehidupan sebagaimana dijalani dalam tatanannya.</p></article>
+    </div>
+  </section>
+
+  <section class="section" id="artikel">
+    <div class="section-heading"><div><p class="eyebrow">RUANG BACA</p><h2>Artikel dan Pemaparan</h2></div><p>Tulisan untuk memperluas pangawikan tentang kehidupan dan hakikat diri.</p></div>
+    <div class="toolbar"><input id="articleSearch" type="search" placeholder="Cari artikel..." aria-label="Cari artikel"><select id="articleCategory" aria-label="Pilih kategori"><option value="all">Semua kategori</option><option value="landasan">Landasan Kawruh</option><option value="manusia">Hakikat Manusia</option><option value="spiritualitas">Spiritualitas</option></select></div>
+    <div class="card-grid" id="articleGrid">
+      <article class="content-card" data-category="landasan"><span class="tag">Landasan Kawruh</span><h3>Kawruh Sejati dan Kasunyatan Hakiki</h3><p>Memahami perbedaan antara kenyataan hakiki dan pemahaman manusia terhadap kenyataan.</p><a href="#" class="read-link">Baca artikel <b>↗</b></a></article>
+      <article class="content-card" data-category="manusia"><span class="tag">Hakikat Manusia</span><h3>Jatining Panguripan dan Hakikat Diri</h3><p>Pemaparan mengenai hakikat kehidupan manusia dan susunan keberadaannya.</p><a href="#" class="read-link">Baca artikel <b>↗</b></a></article>
+      <article class="content-card" data-category="spiritualitas"><span class="tag">Spiritualitas</span><h3>Esensi Spiritualitas</h3><p>Memahami kedalaman kehidupan rohani tanpa terjebak pada penafsiran yang sempit.</p><a href="https://dhimas2467.github.io/katalog-buku-uttamopadesa/esensi-spiritualitas.html" class="read-link">Baca artikel <b>↗</b></a></article>
+    </div>
+    <p class="editor-note">Artikel lain dapat ditambahkan melalui berkas <code>script.js</code> atau dibuat sebagai halaman HTML tersendiri.</p>
+  </section>
+
+  <section class="section catalog-section" id="katalog">
+    <div class="section-heading"><div><p class="eyebrow">PUSTAKA KARYA</p><h2>Katalog Buku</h2></div><p>Kumpulan buku dan naskah pemaparan yang menjadi bagian dari khazanah Kawruh Sejati.</p></div>
+    <div class="toolbar"><input id="bookSearch" type="search" placeholder="Cari judul buku..." aria-label="Cari buku"><select id="bookCategory" aria-label="Pilih kategori buku"><option value="all">Semua kategori</option><option value="landasan">Landasan Kawruh</option><option value="panguripan">Panguripan</option><option value="pribadi">Pengenalan Diri</option></select></div>
+    <div class="book-grid" id="bookGrid">
+      <article class="book-card" data-category="landasan"><div class="book-cover cover-one"><span>WEDHARAN</span><b>PRABHAWANING<br>PANGURIPAN</b><small>KAWRUH SEJATI</small></div><div><span class="tag">Landasan Kawruh</span><h3>Wedharan Prabhawaning Panguripan</h3><p>Pemaparan tentang sumber, daya, dan tatanan kehidupan.</p></div></article>
+      <article class="book-card" data-category="panguripan"><div class="book-cover cover-two"><span>NAWA</span><b>RUPA SATYA<br>JIWANA</b><small>URIP SEJATI</small></div><div><span class="tag">Panguripan</span><h3>Nawa Rupa Satya Jiwana</h3><p>Sembilan aspek untuk memahami perjalanan menuju Urip Sejati.</p></div></article>
+      <article class="book-card" data-category="pribadi"><div class="book-cover cover-three"><span>NAWA</span><b>PANGAWIKANING<br>DHIRI</b><small>HAKIKAT DIRI</small></div><div><span class="tag">Pengenalan Diri</span><h3>Nawa Pangawikaning Dhiri</h3><p>Pemaparan tentang raga, indriya, cipta, rasa, karsa, dan Jatining Dhiri.</p></div></article>
+      <article class="book-card" data-category="panguripan"><div class="book-cover cover-four"><span>NAWA</span><b>PRABODHA</b><small>PROSES PANGAWIKAN</small></div><div><span class="tag">Panguripan</span><h3>Nawa Prabodha</h3><p>Pemaparan tahapan proses pengenalan dan pendalaman kawruh.</p></div></article>
+    </div>
+    <div class="catalog-cta"><p>Jelajahi daftar karya dan informasi buku selengkapnya.</p><a class="btn gold" href="https://dhimas2467.github.io/katalog-buku-uttamopadesa/">Buka Katalog Buku Uttamopadesa ↗</a></div>
+  </section>
+
+  <section class="closing"><p class="eyebrow">PANGAWIKAN • KASUNYATAN • PANGURIPAN</p><h2>Kawruh menjadi pepadhang<br>untuk memahami kehidupan.</h2></section>
+</main>
+<footer><div class="footer-brand">PUSTAKA <b>KAWRUH SEJATI</b></div><p>Pusat dokumentasi, pemaparan, dan penyebarluasan Kawruh Sejati.</p><small>© 2026 Pustaka Kawruh Sejati · Dhimas Purnomo, SH</small></footer>
+<script src="script.js"></script>
+</body>
+</html>
