@@ -1069,12 +1069,14 @@ footer small {
    HALAMAN ISI ARTIKEL
 ========================================= */
 
-.article-page {
+body.article-page {
   background: var(--dark);
 }
 
-.article-body {
+.article-page .article-body {
   box-sizing: border-box;
+  display: block;
+  position: relative;
   width: calc(100% - 40px);
   max-width: 900px;
   margin: 45px auto 70px;
@@ -1082,68 +1084,72 @@ footer small {
   background: var(--paper);
   color: var(--text);
   border: 1px solid var(--gold);
+  border-radius: 3px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
   font-family: var(--sans);
   font-size: 15px;
   line-height: 2;
 }
 
-.article-meta {
+.article-page .article-meta {
   margin-bottom: 28px;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   border-bottom: 1px solid var(--line);
-  color: #947441;
-  font-size: 11px;
+  color: #927344;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
-.article-body p {
+.article-page .article-body p {
   margin: 0 0 22px;
-  color: #514536;
+  color: var(--text);
   font-size: 15px;
   line-height: 2;
+  text-align: justify;
 }
 
-.article-body p.lead {
+.article-page .article-body p.lead {
   margin-bottom: 30px;
-  color: #705a3b;
+  color: #72552e;
   font-family: var(--serif);
   font-size: 19px;
   line-height: 1.8;
+  font-weight: 600;
 }
 
-.article-body .back-link {
+.article-page .back-link {
   display: inline-block;
-  margin-top: 20px;
-  padding: 11px 18px;
+  margin-top: 25px;
+  padding: 12px 18px;
   border: 1px solid var(--gold);
   color: #806333;
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
+  transition: 0.25s ease;
 }
 
-.article-body .back-link:hover {
+.article-page .back-link:hover {
   background: var(--dark-soft);
   color: var(--cream);
 }
 
-@media (max-width: 520px) {
-  .article-body {
+@media (max-width: 600px) {
+  .article-page .article-body {
     width: calc(100% - 28px);
     margin: 28px auto 40px;
     padding: 30px 22px 45px;
-    font-size: 14px;
   }
 
-  .article-body p {
+  .article-page .article-body p {
     font-size: 14px;
     line-height: 1.9;
-    margin-bottom: 19px;
+    text-align: left;
   }
 
-  .article-body p.lead {
+  .article-page .article-body p.lead {
     font-size: 17px;
   }
 }
