@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
 <header class="site-header">
   <a class="brand" href="index.html">
     <span class="brand-mark">ꦏ</span>
@@ -19,7 +18,7 @@
     </span>
   </a>
 
-  <button class="menu-toggle" aria-label="Buka navigasi">☰</button>
+  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
 
   <nav class="nav">
     <a href="index.html">Beranda</a>
@@ -28,10 +27,7 @@
   </nav>
 </header>
 
-<!-- JUDUL HALAMAN -->
-
 <section class="page-hero section">
-
   <div class="breadcrumb">
     <a href="index.html">Beranda</a> / Artikel
   </div>
@@ -45,30 +41,9 @@
     hakikat kehidupan, pengenalan diri, dan spiritualitas.
     Setiap halaman menampilkan tiga artikel.
   </p>
-
 </section>
 
-<!-- DAFTAR ARTIKEL -->
-
 <main class="listing-wrap section">
-
-  <div class="toolbar">
-
-    <input
-      id="search"
-      type="search"
-      placeholder="Cari judul atau isi ringkasan artikel..."
-      aria-label="Cari artikel"
-    >
-
-    <select id="category" aria-label="Pilih kategori">
-      <option value="all">Semua kategori</option>
-      <option value="landasan">Landasan Kawruh</option>
-      <option value="manusia">Hakikat Manusia</option>
-      <option value="spiritualitas">Spiritualitas</option>
-    </select>
-
-  </div>
 
   <div class="article-list" id="articleList">
 
@@ -171,105 +146,80 @@
 </footer>
 
 <script>
-const all = [...document.querySelectorAll('.article-entry')];
-const pager = document.getElementById('pagination');
-const search = document.getElementById('search');
-const category = document.getElementById('category');
+document.addEventListener('DOMContentLoaded', function () {
+  const articles = [...document.querySelectorAll('.article-entry')];
+  const pager = document.getElementById('pagination');
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
 
-let page = 1;
+  let page = 1;
+  const perPage = 3;
 
-function render() {
+  function render() {
+    const totalPages = Math.ceil(articles.length / perPage);
 
-  const filtered = all.filter(article => {
-    const matchesSearch = article.textContent
-      .toLowerCase()
-      .includes(search.value.toLowerCase());
+    articles.forEach((article, index) => {
+      article.hidden = !(
+        index >= (page - 1) * perPage &&
+        index < page * perPage
+      );
+    });
 
-    const matchesCategory =
-      category.value === 'all' ||
-      article.dataset.category === category.value;
+    pager.innerHTML = '';
 
-    return matchesSearch && matchesCategory;
-  });
+    const previous = document.createElement('button');
+    previous.textContent = '← Sebelumnya';
+    previous.disabled = page === 1;
 
-  const pages = Math.max(1, Math.ceil(filtered.length / 3));
+    previous.addEventListener('click', function () {
+      if (page > 1) {
+        page--;
+        render();
+      }
+    });
 
-  page = Math.min(page, pages);
+    pager.appendChild(previous);
 
-  all.forEach(article => {
-    article.hidden = true;
-  });
+    for (let number = 1; number <= totalPages; number++) {
+      const button = document.createElement('button');
+      button.textContent = number;
 
-  filtered.forEach((article, index) => {
-    article.hidden =
-      !(index >= (page - 1) * 3 && index < page * 3);
-  });
+      if (number === page) {
+        button.className = 'active';
+        button.setAttribute('aria-current', 'page');
+      }
 
-  pager.innerHTML = '';
+      button.addEventListener('click', function () {
+        page = number;
+        render();
+      });
 
-  const previous = document.createElement('button');
-  previous.textContent = '← Sebelumnya';
-  previous.disabled = page === 1;
-
-  previous.onclick = () => {
-    page--;
-    render();
-  };
-
-  pager.append(previous);
-
-  for (let number = 1; number <= pages; number++) {
-
-    const button = document.createElement('button');
-
-    button.textContent = number;
-
-    if (number === page) {
-      button.className = 'active';
-      button.setAttribute('aria-current', 'page');
+      pager.appendChild(button);
     }
 
-    button.onclick = () => {
-      page = number;
-      render();
-    };
+    const next = document.createElement('button');
+    next.textContent = 'Berikutnya →';
+    next.disabled = page === totalPages;
 
-    pager.append(button);
+    next.addEventListener('click', function () {
+      if (page < totalPages) {
+        page++;
+        render();
+      }
+    });
+
+    pager.appendChild(next);
   }
 
-  const next = document.createElement('button');
-  next.textContent = 'Berikutnya →';
-  next.disabled = page === pages;
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
 
-  next.onclick = () => {
-    page++;
-    render();
-  };
-
-  pager.append(next);
-}
-
-search.addEventListener('input', () => {
-  page = 1;
   render();
 });
-
-category.addEventListener('change', () => {
-  page = 1;
-  render();
-});
-
-render();
-
-/* Navigasi HP */
-
-const menuToggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-
-menuToggle.addEventListener('click', () => {
-  nav.classList.toggle('open');
-});
-
 </script>
 
 </body>
