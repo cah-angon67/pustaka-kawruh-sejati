@@ -1063,3 +1063,79 @@ footer small {
     width: 100%;
   }
 }
+
+/* =========================================
+   HALAMAN ISI ARTIKEL
+========================================= */
+
+.article-body {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 45px 32px 85px;
+  color: #403426;
+  background: #fffdf8;
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 2;
+}
+
+.article-meta {
+  margin-bottom: 28px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e5dac8;
+  color: #947441;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.article-body p {
+  margin: 0 0 22px;
+  color: #514536;
+  font-size: 15px;
+  line-height: 2;
+}
+
+.article-body p.lead {
+  margin-bottom: 30px;
+  color: #705a3b;
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+.article-body .back-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 11px 18px;
+  border: 1px solid #b99a62;
+  color: #806333;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.article-body .back-link:hover {
+  background: #302116;
+  color: #f4efe5;
+}
+
+@media (max-width: 520px) {
+  .article-body {
+    padding: 30px 22px 55px;
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .article-body p {
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 19px;
+  }
+
+  .article-body p.lead {
+    font-size: 17px;
+  }
+}
