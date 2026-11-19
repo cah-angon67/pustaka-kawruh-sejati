@@ -33,24 +33,17 @@
   </div>
 
   <p class="eyebrow">PUSTAKA KARYA</p>
+
   <h1>Katalog Buku</h1>
+
   <p>
     Kumpulan buku dan naskah pemaparan Kawruh Sejati.
-    Katalog akan terus dilengkapi dengan deskripsi dan
-    tautan setiap karya.
+    Katalog ini menjadi ruang pengenalan berbagai karya
+    yang membahas hakikat kehidupan dan Kawruh Sejati.
   </p>
 </section>
 
 <main class="listing-wrap section">
-
-  <div class="toolbar">
-    <input
-      id="bookSearch"
-      type="search"
-      placeholder="Cari judul buku..."
-      aria-label="Cari judul buku"
-    >
-  </div>
 
   <div class="catalog-list" id="books">
 
@@ -123,6 +116,7 @@
 
   <div class="catalog-cta">
     <p>Telusuri katalog karya Uttamopadesa selengkapnya.</p>
+
     <a
       class="btn gold"
       href="https://dhimas2467.github.io/katalog-buku-uttamopadesa/"
@@ -141,28 +135,17 @@
 </footer>
 
 <script>
-  // Fungsi pencarian buku
-  document.getElementById('bookSearch').addEventListener('input', function(e) {
-    const keyword = e.target.value.toLowerCase();
-
-    document.querySelectorAll('#books .book-card').forEach(function(card) {
-      card.hidden = !card.textContent.toLowerCase().includes(keyword);
-    });
-  });
-
-  // Fungsi navigasi ponsel
+document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
 
-  menuToggle.addEventListener('click', function() {
-    const isOpen = nav.classList.toggle('active');
-
-    menuToggle.setAttribute('aria-expanded', isOpen);
-    menuToggle.setAttribute(
-      'aria-label',
-      isOpen ? 'Tutup navigasi' : 'Buka navigasi'
-    );
-  });
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+});
 </script>
 
 </body>
