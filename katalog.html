@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Katalog buku Pustaka Kawruh Sejati.">
   <title>Katalog Buku — Pustaka Kawruh Sejati</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -18,7 +19,9 @@
     </span>
   </a>
 
-  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
+  <button class="menu-toggle"
+          aria-label="Buka navigasi"
+          aria-expanded="false">☰</button>
 
   <nav class="nav">
     <a href="index.html">Beranda</a>
@@ -48,68 +51,142 @@
   <div class="catalog-list" id="books">
 
     <article class="book-card">
-      <div class="book-cover cover-one">
-        <span>WEDHARAN</span>
-        <b>PRABHAWANING<br>PANGURIPAN</b>
-        <small>KAWRUH SEJATI</small>
+
+      <div class="book-cover">
+        <img
+          src="kawruh-sejati.jpg"
+          alt="Sampul buku Hakikat Kawruh Sejati">
       </div>
 
-      <div>
-        <span class="tag">Landasan Kawruh</span>
-        <h3>Wedharan Prabhawaning Panguripan</h3>
+      <div class="book-info">
+        <span class="tag">Kawruh Sejati</span>
+
+        <h3>HAKIKAT KAWRUH SEJATI</h3>
+
         <p>
-          Pemaparan tentang sumber, daya, dan tatanan kehidupan.
+          Buku pemaparan Kawruh Sejati.
         </p>
+
+        <a class="btn gold" href="kawruh-sejati.html">
+          Baca Buku →
+        </a>
       </div>
+
     </article>
 
+  </div>
+
+  <div class="catalog-cta">
+    <p>Telusuri katalog karya Uttamopadesa selengkapnya.</p>
+
+    <a
+      class="btn gold"
+      href="https://dhimas2467.github.io/katalog-buku-uttamopadesa/"
+    >
+      Buka Katalog Uttamopadesa ↗
+    </a>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-brand">
+    PUSTAKA <b>KAWRUH SEJATI</b>
+  </div>
+  <p>© 2026 Cah Angon 67</p>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('.nav');
+
+  if (menuToggle && nav) {
+    menuToggle.addEventListener('click', function () {
+      const open = nav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+});
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Katalog buku Pustaka Kawruh Sejati.">
+  <title>Katalog Buku — Pustaka Kawruh Sejati</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+  <a class="brand" href="index.html">
+    <span class="brand-mark">ꦏ</span>
+    <span>
+      <b>PUSTAKA</b>
+      <small>KAWRUH SEJATI</small>
+    </span>
+  </a>
+
+  <button class="menu-toggle"
+          aria-label="Buka navigasi"
+          aria-expanded="false">☰</button>
+
+  <nav class="nav">
+    <a href="index.html">Beranda</a>
+    <a href="artikel.html">Artikel</a>
+    <a href="katalog.html">Katalog Buku</a>
+  </nav>
+</header>
+
+<section class="page-hero section">
+  <div class="breadcrumb">
+    <a href="index.html">Beranda</a> / Katalog Buku
+  </div>
+
+  <p class="eyebrow">PUSTAKA KARYA</p>
+
+  <h1>Katalog Buku</h1>
+
+  <p>
+    Kumpulan buku dan naskah pemaparan Kawruh Sejati.
+    Katalog ini menjadi ruang pengenalan berbagai karya
+    yang membahas hakikat kehidupan dan Kawruh Sejati.
+  </p>
+</section>
+
+<main class="listing-wrap section">
+
+  <div class="catalog-list" id="books">
+
     <article class="book-card">
-      <div class="book-cover cover-two">
-        <span>NAWA</span>
-        <b>RUPA SATYA<br>JIWANA</b>
-        <small>URIP SEJATI</small>
+
+      <div class="book-cover">
+        <img
+          src="kawruh-sejati.jpg"
+          alt="Sampul buku Hakikat Kawruh Sejati">
       </div>
 
-      <div>
-        <span class="tag">Panguripan</span>
-        <h3>Nawa Rupa Satya Jiwana</h3>
+      <div class="book-info">
+        <span class="tag">Kawruh Sejati</span>
+
+        <h3>HAKIKAT KAWRUH SEJATI</h3>
+
         <p>
-          Sembilan aspek untuk memahami perjalanan menuju Urip Sejati.
+          Buku pemaparan Kawruh Sejati.
         </p>
-      </div>
-    </article>
 
-    <article class="book-card">
-      <div class="book-cover cover-three">
-        <span>NAWA</span>
-        <b>PANGAWIKANING<br>DHIRI</b>
-        <small>HAKIKAT DIRI</small>
+        <a class="btn gold" href="kawruh-sejati.html">
+          Baca Buku →
+        </a>
       </div>
 
-      <div>
-        <span class="tag">Pengenalan Diri</span>
-        <h3>Nawa Pangawikaning Dhiri</h3>
-        <p>
-          Pemaparan tentang raga, indriya, cipta, rasa, karsa,
-          dan Jatining Dhiri.
-        </p>
-      </div>
-    </article>
-
-    <article class="book-card">
-      <div class="book-cover cover-four">
-        <span>NAWA</span>
-        <b>PRABODHA</b>
-        <small>PROSES PANGAWIKAN</small>
-      </div>
-
-      <div>
-        <span class="tag">Panguripan</span>
-        <h3>Nawa Prabodha</h3>
-        <p>
-          Pemaparan tahapan proses pengenalan dan pendalaman kawruh.
-        </p>
-      </div>
     </article>
 
   </div>
