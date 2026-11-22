@@ -1307,3 +1307,9 @@ body.article-page {
     font-size: 17px;
   }
 }
+
+/* Membuat paragraf artikel rata kiri-kanan */
+.article-page .article-body p {
+  text-align: justify !important;
+  text-justify: inter-word;
+}
