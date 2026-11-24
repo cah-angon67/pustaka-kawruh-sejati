@@ -1404,4 +1404,8 @@ body.article-page {
     gap: 12px;
   }
 }
+/* Mengangkat posisi isi halaman utama */
+.hero-content {
+  transform: translateY(-65px);
+}
 
