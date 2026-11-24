@@ -3,68 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description" content="Pustaka Kawruh Sejati: pusat pemaparan, artikel, dan katalog buku tentang Kawruh Sejati, Kasunyatan Hakiki, hakikat kehidupan, dan Tatananing Panguripan.">
+
   <meta name="theme-color" content="#21170f">
+
   <title>Pustaka Kawruh Sejati</title>
+
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="site-header">
-  <a class="brand" href="#beranda" aria-label="Pustaka Kawruh Sejati">
-    <span class="brand-mark">ꦏ</span>
-    <span><b>PUSTAKA</b><small>KAWRUH SEJATI</small></span>
-  </a>
-  <button class="menu-toggle" aria-label="Buka navigasi" aria-expanded="false">☰</button>
-  <nav class="nav">
-    <a href="#beranda">Beranda</a>
-    <a href="artikel.html">Artikel</a>
-    <a href="katalog.html">Katalog Buku</a>
-  </nav>
-</header>
+  <header class="site-header">
+    <a class="brand" href="#beranda" aria-label="Pustaka Kawruh Sejati">
+      <span class="brand-mark">ꦏ</span>
+      <span>
+        <b>PUSTAKA</b>
+        <small>KAWRUH SEJATI</small>
+      </span>
+    </a>
 
-<main>
-  <section class="hero" id="beranda">
-    <div class="hero-content">
+    <button
+      class="menu-toggle"
+      aria-label="Buka navigasi"
+      aria-expanded="false"
+      type="button">
+      ☰
+    </button>
 
-      <!-- TOMBOL MENUJU BLOG KAWRUH SEJATI -->
-      <a class="blog-link" href="https://kawruhsejatiblog.blogspot.com/">
-        <span class="blog-icon">▤</span>
-        <span>KAWRUH SEJATI (Blog)</span>
-        <span class="blog-arrow">›</span>
-      </a>
+    <nav class="nav">
+      <a href="#beranda">Beranda</a>
+      <a href="artikel.html">Artikel</a>
+      <a href="katalog.html">Katalog Buku</a>
+    </nav>
+  </header>
 
-      <p class="eyebrow">PUSTAKA • PEMAPARAN • PANGAWIKAN</p>
+  <main>
+    <section class="hero" id="beranda">
 
-      <h1>Memahami Hakikat<br><em>Kawruh Sejati</em></h1>
+      <div class="hero-content">
 
-      <p class="hero-lead">
-        Ruang pustaka untuk mengenal Kasunyatan Hakiki,
-        memahami hakikat kehidupan, dan menapaki
-        Tatananing Panguripan.
-      </p>
+        <!-- TOMBOL MENUJU BLOG KAWRUH SEJATI -->
+        <a
+          href="https://kawruhsejatiblog.blogspot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Kunjungi Blog Kawruh Sejati"
+          style="
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            min-width: 245px;
+            padding: 13px 18px;
+            margin-bottom: 25px;
+            border: 1px solid #d3b779;
+            border-radius: 7px;
+            background: linear-gradient(135deg, #493526, #21170f);
+            color: #f5efe4;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+          "
+        >
+          <span style="font-size: 19px; color: #d3b779;">▤</span>
+          <span>KAWRUH SEJATI (BLOG)</span>
+          <span style="font-size: 22px; color: #d3b779;">›</span>
+        </a>
 
-      <div class="hero-actions">
-        <a class="btn gold" href="artikel.html">Jelajahi Artikel</a>
-        <a class="btn outline" href="katalog.html">Lihat Katalog Buku</a>
+        <p class="eyebrow">
+          PUSTAKA • PEMAPARAN • PANGAWIKAN
+        </p>
+
+        <h1>
+          Memahami Hakikat<br>
+          <em>Kawruh Sejati</em>
+        </h1>
+
+        <p class="hero-lead">
+          Ruang pustaka untuk mengenal Kasunyatan Hakiki,
+          memahami hakikat kehidupan, dan menapaki
+          Tatananing Panguripan.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn gold" href="artikel.html">
+            Jelajahi Artikel
+          </a>
+
+          <a class="btn outline" href="katalog.html">
+            Lihat Katalog Buku
+          </a>
+        </div>
+
       </div>
 
+      <div class="hero-seal" aria-hidden="true">
+        <span>ꦏ</span>
+        <small>KAWRUH<br>SEJATI</small>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      PUSTAKA <b>KAWRUH SEJATI</b>
     </div>
 
-    <div class="hero-seal" aria-hidden="true">
-      <span>ꦏ</span>
-      <small>KAWRUH<br>SEJATI</small>
-    </div>
-  </section>
-</main>
+    <p>
+      Pusat dokumentasi, pemaparan, dan penyebarluasan Kawruh Sejati.
+    </p>
 
-<footer>
-  <div class="footer-brand">PUSTAKA <b>KAWRUH SEJATI</b></div>
-  <p>Pusat dokumentasi, pemaparan, dan penyebarluasan Kawruh Sejati.</p>
-  <small>© 2026 Pustaka Kawruh Sejati · Cah Angon 67</small>
-</footer>
+    <small>
+      © 2026 Pustaka Kawruh Sejati · Cah Angon 67
+    </small>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
 </body>
 </html>
